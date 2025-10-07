@@ -62,13 +62,14 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
             {/* Right Column - Hero Image */}
             <div className="relative">
               <div className="relative z-10">
-                <div className="w-full h-[520px] rounded-lg shadow-xl overflow-hidden">
+                <div className="w-full h-[380px] md:h-[460px] lg:h-[520px] rounded-lg shadow-xl overflow-hidden flex items-end">
                   <Image
                     src="/Frame 1.png"
                     alt="Executivo Rocha - Seu parceiro de confiança"
                     width={1040}
                     height={520}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain object-bottom"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                     priority
                   />
                 </div>
