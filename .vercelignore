@@ -11,8 +11,3 @@ yarn.lock
 pnpm-workspace.yaml
 .pnpm
 .pnpm-debug.log*
-npm-debug.log*
-.npm
-.cache
-.turbo
-.vercel/cache
