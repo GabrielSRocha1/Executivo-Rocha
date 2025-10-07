@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import ChatBot from '../components/ChatBot';
 
 export default function Home() {
@@ -62,10 +63,13 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
             <div className="relative">
               <div className="relative z-10">
                 <div className="w-full h-[520px] rounded-lg shadow-xl overflow-hidden">
-                  <img 
-                    src="1759104394510-removebg-preview.png" 
+                  <Image
+                    src="/Frame 1.png"
                     alt="Executivo Rocha - Seu parceiro de confiança"
+                    width={1040}
+                    height={520}
                     className="w-full h-full object-contain"
+                    priority
                   />
                 </div>
               </div>
