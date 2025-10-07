@@ -26,6 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/Favicon-executivo-rocha (1).png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/Favicon-executivo-rocha (1).png" />
+      </head>
       <body
         className={`${inter.className} antialiased`}
       >
