@@ -43,6 +43,7 @@ export default function Home() {
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4">
               Seu Parceiro de Confiança para Negócios e Imigração no Paraguai: Transforme Sua Vida com Segurança e Apoio Total
               </h1>
+              {/* Cache refresh */}
               <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
               Deixe sua mudança, negócio ou investimento no Paraguai nas mãos de quem entrega resultados de verdade.
 Nossa equipe é composta por especialistas experientes, com histórico comprovado em tornar processos seguros, ágeis e 100% dentro da lei.
