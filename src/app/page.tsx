@@ -73,9 +73,9 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                     sizes="100vw"
                     priority
                   />
-                  {/* Desktop/tablet image (restored old image) */}
+                  {/* Desktop/tablet image (updated image) */}
                   <Image
-                    src="/1759097186795-removebg-preview.png"
+                    src="/1759104394510-removebg-preview.png"
                     alt="Executivo Rocha - Seu parceiro de confiança"
                     width={1040}
                     height={520}
