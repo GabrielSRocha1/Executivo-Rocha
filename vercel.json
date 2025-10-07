@@ -1,3 +1,12 @@
 {
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "buildCommand": "npm ci --legacy-peer-deps && npm run build",
+  "installCommand": "npm ci --legacy-peer-deps --no-cache --no-audit --no-fund",
+  "env": {
+    "NPM_CONFIG_CACHE": "",
+    "NPM_CONFIG_TMP": "",
+    "NPM_CONFIG_PREFER_OFFLINE": "false",
+    "NPM_CONFIG_AUDIT": "false",
+    "NPM_CONFIG_FUND": "false"
+  }
 }
