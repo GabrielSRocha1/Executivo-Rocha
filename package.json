@@ -33,8 +33,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check",
-    "format": "biome format --write",
-    "postinstall": "echo 'Using npm as package manager'"
+    "lint": "next lint"
   }
 }
