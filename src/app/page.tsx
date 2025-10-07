@@ -63,14 +63,24 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
             <div className="relative">
               <div className="relative z-10">
                 <div className="w-full h-[380px] md:h-[460px] lg:h-[520px] rounded-lg shadow-xl overflow-hidden flex items-end">
+                  {/* Mobile image (only) */}
                   <Image
                     src="/Frame 1.png"
                     alt="Executivo Rocha - Seu parceiro de confiança"
                     width={1040}
                     height={520}
-                    className="w-full h-full object-contain object-bottom"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                    className="w-full h-full object-contain object-bottom block md:hidden"
+                    sizes="100vw"
                     priority
+                  />
+                  {/* Desktop/tablet image (restored old image) */}
+                  <Image
+                    src="/1759097186795-removebg-preview.png"
+                    alt="Executivo Rocha - Seu parceiro de confiança"
+                    width={1040}
+                    height={520}
+                    className="w-full h-full object-contain object-bottom hidden md:block"
+                    sizes="(max-width: 1024px) 50vw, 50vw"
                   />
                 </div>
               </div>
