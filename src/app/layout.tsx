@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Guia Paraguai - Seu Guia de Negócios e Imigração",
+  title: "Executivo Rocha - Seu Guia de Negócios e Imigração no Paraguai",
   description: "Nosso time de especialistas oferece soluções completas e legais para a sua mudança de vida, negócio ou investimento no Paraguai.",
 };
 

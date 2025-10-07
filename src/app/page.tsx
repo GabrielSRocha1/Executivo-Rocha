@@ -63,7 +63,7 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 <div className="w-full h-[520px] rounded-lg shadow-xl overflow-hidden">
                   <img 
                     src="1759104394510-removebg-preview.png" 
-                    alt="Guia Paraguai - Seu parceiro de confiança"
+                    alt="Executivo Rocha - Seu parceiro de confiança"
                     className="w-full h-full object-contain"
                   />
                 </div>
