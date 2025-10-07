@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm ci && npm run build",
-  "installCommand": "npm ci --legacy-peer-deps",
+  "buildCommand": "npm ci --legacy-peer-deps --no-audit --no-fund && npm run build",
+  "installCommand": "npm ci --legacy-peer-deps --no-audit --no-fund",
   "framework": "nextjs",
   "functions": {
     "app/**": {
@@ -9,6 +9,11 @@
   },
   "env": {
     "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
-    "NPM_CONFIG_AUTO_INSTALL_PEERS": "true"
+    "NPM_CONFIG_AUTO_INSTALL_PEERS": "true",
+    "NPM_CONFIG_PREFER_OFFLINE": "true",
+    "NPM_CONFIG_AUDIT": "false",
+    "NPM_CONFIG_FUND": "false",
+    "NPM_CONFIG_PACKAGE_LOCK": "true",
+    "NODE_ENV": "production"
   }
 }
