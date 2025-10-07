@@ -94,15 +94,9 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 </svg>
                 </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Residência Temporária</h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Processo rápido e descomplicado para viver legalmente no Paraguai
               </p>
-              <button className="text-red-600 font-semibold hover:text-blue-700 transition-colors flex items-center space-x-2 mx-auto">
-                <span>Saiba mais</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
             
             {/* Identidade Paraguaia */}
@@ -113,15 +107,9 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 </svg>
                 </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Identidade Paraguaia</h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Documento oficial paraguaio válido por 10 anos
               </p>
-              <button className="text-red-600 font-semibold hover:text-blue-700 transition-colors flex items-center space-x-2 mx-auto">
-                <span>Saiba mais</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
             
             {/* Abrir Empresa PY */}
@@ -132,15 +120,9 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 </svg>
                 </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Abrir Empresa PY</h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Constituição de EAS com Hub de Negócios completo
               </p>
-              <button className="text-red-600 font-semibold hover:text-blue-700 transition-colors flex items-center space-x-2 mx-auto">
-                <span>Saiba mais</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
             
             {/* Consultoria Marlon */}
@@ -151,15 +133,9 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 </svg>
                 </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Consultoria </h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Orientação especializada personalizada para seu caso
               </p>
-              <button className="text-red-600 font-semibold hover:text-blue-700 transition-colors flex items-center space-x-2 mx-auto">
-                <span>Saiba mais</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
           </div>
         </div>
