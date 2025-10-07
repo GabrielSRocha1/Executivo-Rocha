@@ -47,7 +47,7 @@ export default function Home() {
               Deixe sua mudança, negócio ou investimento no Paraguai nas mãos de quem entrega resultados de verdade.
 Nossa equipe é composta por especialistas experientes, com histórico comprovado em tornar processos seguros, ágeis e 100% dentro da lei.
               </p>
-              <a href="https://wa.me/message/GQRD6T6PCSMFF1" target="_blank" rel="noopener noreferrer" className="bg-red-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-red-700 transition-colors inline-block">
+              <a href="https://wa.me/message/GQRD6T6PCSMFF1" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-blue-700 transition-colors inline-block">
                 <div className="flex items-center space-x-2">
                   <span>Agendar Consultoria</span>
                   <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
