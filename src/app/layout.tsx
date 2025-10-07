@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   title: "Executivo Rocha - Seu Guia de Negócios e Imigração no Paraguai",
   description: "Nosso time de especialistas oferece soluções completas e legais para a sua mudança de vida, negócio ou investimento no Paraguai.",
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/Logo Executivo Rocha.png',
+    icon: '/Favicon-executivo-rocha (1).png',
+    shortcut: '/Favicon-executivo-rocha (1).png',
+    apple: '/Favicon-executivo-rocha (1).png',
   },
 };
 
