@@ -94,7 +94,7 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 </svg>
                 </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Residência Temporária</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                 Processo rápido e descomplicado para viver legalmente no Paraguai
               </p>
             </div>
@@ -107,7 +107,7 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 </svg>
                 </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Identidade Paraguaia</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                 Documento oficial paraguaio válido por 10 anos
               </p>
             </div>
@@ -120,7 +120,7 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 </svg>
                 </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Abrir Empresa PY</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                 Constituição de EAS com Hub de Negócios completo
               </p>
             </div>
@@ -133,7 +133,7 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 </svg>
                 </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Consultoria </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                 Orientação especializada personalizada para seu caso
               </p>
             </div>
