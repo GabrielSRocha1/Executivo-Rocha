@@ -41,6 +41,12 @@ export default function RootLayout({
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '1428262505966719');
               fbq('track', 'PageView');
+              
+              // API de Conversão
+              fbq('init', 'EAAJ6gpG72QQBPtXLuty0kR0iSBX1ZCwT7IGsdJOmBEDddtQRNuq7xMyjKjmcQE7PUlkW6Rcfj5wgztZB0o4TbXzWOqDnZBMGWzvyJ1Y6rQF6YOt3h8916Pkqs9nxRjGpIoJEysUhgLtdHfWZABZBxOHxZCq2A7b9Kdc6ZCrB9kfECrpzyaHSfOnI1gUHbphNwZDZD');
+              
+              // Função para rastrear conversões
+              window.fbq = window.fbq || function(){(window.fbq.q=window.fbq.q||[]).push(arguments)};
             `,
           }}
         />
@@ -59,6 +65,33 @@ export default function RootLayout({
         className={`${inter.className} antialiased`}
       >
         {children}
+        
+        {/* Script para rastreamento de conversões */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Função para rastrear conversões
+              function trackConversion(eventName, value, currency) {
+                if (typeof fbq !== 'undefined') {
+                  fbq('track', eventName, {
+                    value: value || 0,
+                    currency: currency || 'BRL'
+                  });
+                }
+              }
+              
+              // Rastrear cliques em botões de WhatsApp
+              document.addEventListener('DOMContentLoaded', function() {
+                const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
+                whatsappButtons.forEach(button => {
+                  button.addEventListener('click', function() {
+                    trackConversion('Contact');
+                  });
+                });
+              });
+            `,
+          }}
+        />
       </body>
     </html>
   );
