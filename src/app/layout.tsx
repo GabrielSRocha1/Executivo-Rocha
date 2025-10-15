@@ -27,6 +27,19 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
         
+        {/* Google Tag Manager */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17654699613"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17654699613');
+            `,
+          }}
+        />
+        
         {/* Meta Pixel Code */}
         <script
           dangerouslySetInnerHTML={{
@@ -86,6 +99,12 @@ export default function RootLayout({
                 whatsappButtons.forEach(button => {
                   button.addEventListener('click', function() {
                     trackConversion('Contact');
+                    // Google Tag Manager - Rastrear conversão
+                    if (typeof gtag !== 'undefined') {
+                      gtag('event', 'conversion', {
+                        'send_to': 'AW-17654699613'
+                      });
+                    }
                   });
                 });
               });
