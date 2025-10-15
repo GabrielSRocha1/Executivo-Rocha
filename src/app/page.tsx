@@ -65,7 +65,7 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 <div className="w-full h-[380px] md:h-[460px] lg:h-[520px] rounded-lg shadow-xl overflow-hidden flex items-end">
                   {/* Mobile image (only) */}
                   <Image
-                    src="/Frame 1.png"
+                    src="/ROCHA.png"
                     alt="Executivo Rocha - Seu parceiro de confiança"
                     width={1040}
                     height={520}
@@ -75,7 +75,7 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                   />
                   {/* Desktop/tablet image (updated image) */}
                   <Image
-                    src="/1759104394510-removebg-preview.png"
+                    src="/ROCHA.png"
                     alt="Executivo Rocha - Seu parceiro de confiança"
                     width={1040}
                     height={520}
