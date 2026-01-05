@@ -35,7 +35,7 @@ export default function Home() {
               {/* Logo */}
               <div className="mb-8">
                 <img 
-                  src="/group 24.png" 
+                  src="/Group 24.png" 
                   alt="Logo Executivo Rocha"
                   className="h-32 md:h-40 lg:h-48 w-auto"
                 />
