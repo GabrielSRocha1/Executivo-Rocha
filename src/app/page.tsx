@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import ChatBot from '../components/ChatBot';
 
 export default function Home() {
@@ -34,20 +35,20 @@ export default function Home() {
               {/* Logo */}
               <div className="mb-8">
                 <img 
-                  src="/Logo_Executivo_Rocha__2_-removebg-preview__3___1_-removebg-preview.png" 
+                  src="/group 24.png" 
                   alt="Logo Executivo Rocha"
                   className="h-32 md:h-40 lg:h-48 w-auto"
                 />
               </div>
               
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4">
-              Seu Parceiro de Confiança para Negócios e Imigração no Paraguai: Transforme Sua Vida com Segurança e Apoio Total
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+              Escale o seu Império sem entregar as Chaves.
               </h1>
-              <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
-              Deixe sua mudança, negócio ou investimento no Paraguai nas mãos de quem entrega resultados de verdade.
-Nossa equipe é composta por especialistas experientes, com histórico comprovado em tornar processos seguros, ágeis e 100% dentro da lei.
+              {/* Cache refresh */}
+              <p className="text-lg md:text-small lg:text-2xl font-bold text-gray-300 mb-6 leading-relaxed">
+              Implementamos arquiteturas financeiras de alta performance via Tokenização. Capte recursos globais com autonomia total, segurança jurisdicional em Dubai ou Cayman e zero diluição societária desnecessária.
               </p>
-              <a href="https://wa.me/message/GQRD6T6PCSMFF1" target="_blank" rel="noopener noreferrer" className="bg-red-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-red-700 transition-colors inline-block">
+              <a href="https://wa.me/message/GQRD6T6PCSMFF1" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-blue-700 transition-colors inline-block">
                 <div className="flex items-center space-x-2">
                   <span>Agendar Consultoria</span>
                   <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,11 +61,25 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
             {/* Right Column - Hero Image */}
             <div className="relative">
               <div className="relative z-10">
-                <div className="w-full h-[520px] rounded-lg shadow-xl overflow-hidden">
-                  <img 
-                    src="1759104394510-removebg-preview.png" 
-                    alt="Guia Paraguai - Seu parceiro de confiança"
-                    className="w-full h-full object-contain"
+                <div className="w-full h-[380px] md:h-[460px] lg:h-[520px] rounded-lg shadow-xl overflow-hidden flex items-end">
+                  {/* Mobile image (only) */}
+                  <Image
+                    src="/Frame 1 (1).png"
+                    alt="Executivo Rocha - Seu parceiro de confiança"
+                    width={1040}
+                    height={520}
+                    className="w-full h-full object-contain object-bottom block md:hidden"
+                    sizes="100vw"
+                    priority
+                  />
+                  {/* Desktop/tablet image (updated image) */}
+                  <Image
+                    src="/ROCHA.png"
+                    alt="Executivo Rocha - Seu parceiro de confiança"
+                    width={1040}
+                    height={520}
+                    className="w-full h-full object-contain object-bottom hidden md:block"
+                    sizes="(max-width: 1024px) 50vw, 50vw"
                   />
                 </div>
               </div>
@@ -73,580 +88,391 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
         </div>
       </section>
 
-      {/* Serviços Mais Buscados Section */}
+      {/* O Problema (A Dor do Dono) Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Serviços
+              O Problema (A Dor do Dono)
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Nossos serviços mais procurados por estrangeiros que escolhem o Paraguai
-            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Residência Temporária */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Residência Temporária</h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-                Processo rápido e descomplicado para viver legalmente no Paraguai
-              </p>
-              <button className="text-red-600 font-semibold hover:text-blue-700 transition-colors flex items-center space-x-2 mx-auto">
-                <span>Saiba mais</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-            
-            {/* Identidade Paraguaia */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
-                </svg>
-                </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Identidade Paraguaia</h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-                Documento oficial paraguaio válido por 10 anos
-              </p>
-              <button className="text-red-600 font-semibold hover:text-blue-700 transition-colors flex items-center space-x-2 mx-auto">
-                <span>Saiba mais</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-            
-            {/* Abrir Empresa PY */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-                </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Abrir Empresa PY</h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-                Constituição de EAS com Hub de Negócios completo
-              </p>
-              <button className="text-red-600 font-semibold hover:text-blue-700 transition-colors flex items-center space-x-2 mx-auto">
-                <span>Saiba mais</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-            
-            {/* Consultoria Marlon */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Consultoria </h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-                Orientação especializada personalizada para seu caso
-              </p>
-              <button className="text-red-600 font-semibold hover:text-blue-700 transition-colors flex items-center space-x-2 mx-auto">
-                <span>Saiba mais</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solução Completa Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            {/* Globe Icon */}
-            <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-8">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              </div>
-            
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 max-w-4xl mx-auto leading-tight">
-              Somos a solução completa para imigrantes, aposentados, investidores e nômades digitais no Paraguai
-            </h2>
-            
-             <div className="bg-red-50 border-l-4 border-red-500 p-6 max-w-4xl mx-auto mb-12">
-               <p className="text-black text-lg">
-                 Tudo que você precisa em um único lugar para realizar seus objetivos de imigração, investimento ou abertura de empresa no Paraguai.
-               </p>
-               </div>
-            </div>
-            
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Left Column */}
-            <div className="space-y-6">
-              {/* Imigração e Residência */}
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-              </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Imigração e Residência</h3>
-                  <p className="text-gray-600 text-sm">Solicitação e acompanhamento do processo de imigração no Paraguai.</p>
-              </div>
-            </div>
-            
-              {/* Emissão da Cédula de Identidade */}
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-              </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Emissão da Cédula de Identidade</h3>
-                  <p className="text-gray-600 text-sm">Documento oficial paraguaio que permite a abertura da empresa e demais registros.</p>
-            </div>
-            </div>
-            
-              {/* Abertura da Empresa EAS */}
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-              </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Abertura da Empresa EAS</h3>
-                  <p className="text-gray-600 text-sm">Constituição da sua empresa no Paraguai, vinculada ao nosso endereço fiscal e postal.</p>
-            </div>
-          </div>
-              
-              {/* Cadastro Fiscal e Tributário */}
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-            </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Cadastro Fiscal e Tributário</h3>
-                  <p className="text-gray-600 text-sm">Registro da empresa nos órgãos competentes, garantindo legalidade e conformidade.</p>
-            </div>
-            </div>
-              
-              {/* Regularização Contábil da Pessoa Física */}
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-            </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Regularização Contábil da Pessoa Física</h3>
-                  <p className="text-gray-600 text-sm">Organização da sua contabilidade pessoal, incluindo residência fiscal.</p>
-            </div>
-          </div>
-        </div>
-            
-            {/* Right Column */}
-            <div className="space-y-6">
-              {/* Integração Contábil PF + PJ */}
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Integração Contábil PF + PJ</h3>
-                  <p className="text-gray-600 text-sm">Combinação da contabilidade da pessoa física e da empresa em um único ambiente.</p>
-                </div>
-              </div>
-
-              {/* Ativação do Portal GuiaParaguai */}
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Ativação do Portal GuiaParaguai</h3>
-                  <p className="text-gray-600 text-sm">Liberação de acesso ao sistema exclusivo para gestão empresarial e pessoal.</p>
-                </div>
-              </div>
-
-              {/* Operações Fiscais Online */}
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Operações Fiscais Online</h3>
-                  <p className="text-gray-600 text-sm">Emissão de invoices, notas fiscais, envio de despesas e documentos à contabilidade.</p>
-                </div>
-              </div>
-
-              {/* Declarações Obrigatórias */}
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Declarações Obrigatórias</h3>
-                  <p className="text-gray-600 text-sm">Declarações mensais do IVA (Formulário 120), IRP anual e IRE anual.</p>
-              </div>
-            </div>
-
-              {/* Manutenção e Suporte Contínuo */}
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Manutenção e Suporte Contínuo</h3>
-                  <p className="text-gray-600 text-sm">Acompanhamento permanente para ajustes fiscais, suporte a dúvidas e novos serviços.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Autoridade e Confiança Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Autoridade e Confiança: Histórico Comprovado
-            </h2>
-            <div className="mb-6">
-              <span className="text-green-600 font-bold text-lg">Zero reclamações</span>
-              <span className="text-gray-700 text-lg"> no Reclame Aqui, Consumidor.gov e </span>
-              <span className="text-blue-600 font-bold text-lg">PROCON</span>
-              <span className="text-gray-700 text-lg">:</span>
-            </div>
-            <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed text-lg">
-              Transparência e confiança são os pilares do nosso negócio. Em mais de uma década de 
-              atuação, nunca tivemos uma única reclamação registrada nos principais canais oficiais de 
-              defesa do consumidor no Brasil. Nossa reputação impecável é o reflexo do nosso 
-              compromisso com a excelência e a satisfação de cada cliente.
-            </p>
-          </div>
-          
-          {/* Trust Badges */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
-            {/* Reclame Aqui */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8 text-center shadow-sm">
-              <div className="w-20 h-20 mx-auto mb-6">
-                <div className="w-full h-full bg-yellow-400 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">RA</span>
-                </div>
-              </div>
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">Verificada por</h3>
-              <h4 className="text-lg font-bold text-yellow-600 mb-4">ReclameAQUI</h4>
-              <div className="flex items-center justify-center space-x-2">
-                <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-                <span className="text-green-600 font-semibold text-sm">Zero Reclamações</span>
-              </div>
-            </div>
-            
-            {/* Consumidor.gov */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8 text-center shadow-sm">
-              <div className="w-20 h-20 mx-auto mb-6">
-                <div className="w-full h-full bg-green-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">gov.br</span>
-                </div>
-              </div>
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">consumidor</h3>
-              <h4 className="text-lg font-bold text-green-600 mb-4">gov.br</h4>
-              <div className="flex items-center justify-center space-x-2">
-                <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-                <span className="text-green-600 font-semibold text-sm">Zero Reclamações</span>
-              </div>
-            </div>
-            
-            {/* PROCON */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8 text-center shadow-sm">
-              <div className="w-20 h-20 mx-auto mb-6">
-                <div className="w-full h-full bg-blue-600 rounded-lg flex items-center justify-center">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.414-4.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                  </svg>
-              </div>
-            </div>
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">PROCON</h3>
-              <h4 className="text-lg font-bold text-blue-600 mb-4">Certificado</h4>
-              <div className="flex items-center justify-center space-x-2">
-                <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-          </div>
-                <span className="text-green-600 font-semibold text-sm">Zero Reclamações</span>
-        </div>
-            </div>
-          </div>
-          
-          {/* Bottom Quote */}
-          <div className="text-center">
-            <p className="text-gray-500 italic text-lg max-w-2xl mx-auto">
-              Nossa reputação fala por si — do nosso primeiro cliente até hoje.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Especialistas Exclusivos Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Header Badge */}
-            <div className="mb-8">
-              <div className="inline-block bg-blue-100 text-red-600 px-6 py-2 rounded-full text-sm font-semibold mb-8">
-                PY 100% FOCADOS NO PARAGUAI
-                  </div>
-                </div>
-                
-            {/* Main Title */}
-            <div className="mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
-                Especialistas Exclusivos em Paraguai. Nada de Terceirização.
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                Enquanto concorrentes genéricos oferecem vários países através de terceiros desconhecidos, 
-                somos 100% focados no Paraguai com equipe própria, escritório próprio, frota própria e 
-                contadores próprios. Isso significa preços competitivos, atualização constante das leis 
-                paraguaias e acompanhamento real em todas as etapas.
-              </p>
-                </div>
-                
-            {/* Nossos Diferenciais */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-12">Nossos Diferenciais:</h3>
-              
-              <div className="space-y-8 max-w-2xl mx-auto text-left">
-                {/* Equipe 100% Própria */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">Equipe 100% Própria no Paraguai</h4>
-                    <p className="text-gray-600 leading-relaxed">
-                      Nenhum processo é terceirizado. Nossos profissionais estão diretamente conectados com você.
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Especialização Exclusiva */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">Especialização Exclusiva</h4>
-                    <p className="text-gray-600 leading-relaxed">
-                      Vivemos e respiramos legislação paraguaia 24/7. Não tentamos ser especialistas em 10 países.
-                    </p>
-              </div>
-            </div>
-            
-                {/* Preço Final Transparente */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-            <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">Preço Final Transparente</h4>
-                    <p className="text-gray-600 leading-relaxed">
-                      Sem intermediários que inflacionam custos. O preço que você vê é o preço que você paga.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Transporte Exclusivo Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            {/* Header Badge */}
-            <div className="inline-block bg-blue-100 text-red-600 px-6 py-2 rounded-full text-sm font-semibold mb-8">
-              ✓ FROTA PRÓPRIA
-            </div>
-            
-            {/* Main Title */}
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              <span className="text-red-600">Transporte Exclusivo</span>
-              <span className="text-gray-900"> para Sua Imigração</span>
-            </h2>
-            
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-16">
-              <span className="text-red-600 font-semibold">Frota própria completa</span> com motoristas especializados para 
-              acompanhar você em todo o processo migratório
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Content */}
-            <div>
-              <p className="text-2xl font-bold text-gray-900 mb-8">
-                Nós oferecemos frota própria com acompanhamento personalizado em cada 
-                etapa do seu processo migratório.
-              </p>
-              
-              {/* Services Grid */}
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                {/* Transfer Porta do Hotel */}
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Transfer Porta do Hotel</h4>
-                    <p className="text-gray-600 text-sm">Buscamos você na porta do seu hotel e levamos de volta com total conforto</p>
-                </div>
-                </div>
-                
-                {/* Acompanhamento em Todos os Órgãos */}
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Acompanhamento em Todos os Órgãos</h4>
-                    <p className="text-gray-600 text-sm">Migraciones, Identificaciones, Interpol, Polícia Nacional de Informática</p>
-              </div>
-            </div>
-            
-                {/* Carteira de Motorista */}
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Carteira de Motorista</h4>
-                    <p className="text-gray-600 text-sm">Levamos você para fazer sua habilitação paraguaia com segurança</p>
-                  </div>
-                </div>
-                
-                {/* Transfer Aeroporto / Hotel */}
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                      </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Transfer Aeroporto / Hotel</h4>
-                    <p className="text-gray-600 text-sm">Serviço completo de translado do aeroporto para seu hotel e vice-versa</p>
-                    </div>
-                  </div>
-                </div>
-
-              {/* Features List */}
-              <div className="bg-red-50 rounded-lg p-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                    <span className="text-blue-900 font-medium text-sm">3 carros próprios modernos</span>
-                </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-              </div>
-                    <span className="text-blue-900 font-medium text-sm">Ar-condicionado em todos os veículos</span>
-            </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className="text-blue-900 font-medium text-sm">Motoristas profissionais treinados</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className="text-blue-900 font-medium text-sm">Especialistas no território paraguaio</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Right Column - Vehicle Image */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Imagem à esquerda */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-8 relative overflow-hidden">
-                <div className="relative z-10">
-                  <img 
-                    src="/1759668940708.jpg" 
-                    alt="Frota própria - Veículos modernos para transporte exclusivo"
-                    className="w-full h-[500px] object-contain rounded-lg shadow-lg"
-                  />
-                  <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
-                    <div className="flex items-center space-x-2">
-                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      <span className="text-gray-600 text-sm font-medium">Fotos reais da nossa frota</span>
+              <img 
+                src="/capital-privado-1.jpg" 
+                alt="Capital Privado" 
+                className="w-full h-auto rounded-lg shadow-xl"
+              />
+            </div>
+            
+            {/* Texto à direita */}
+            <div className="space-y-6">
+              <p className="text-2xl md:text-3xl font-bold text-gray-800 leading-tight">
+                O capital tradicional é caro, lento e viciado em controle.
+              </p>
+              <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>
+                  <strong></strong> Para o empresário comum, o caminho é o banco ou o Venture Capital. Para o visionário, esses caminhos são armadilhas:
+                </p>
+                <div className="space-y-3">
+                  <p>
+                    <strong>Bancos:</strong> Burocracia paralisante e juros que corroem a margem.
+                  </p>
+                  <p>
+                    <strong>Venture Capital:</strong> Você levanta dinheiro, mas perde o comando da sua própria visão. No Brasil e no Paraguai, a asfixia regulatória impede a velocidade que o seu negócio exige. Nós rompemos esse teto.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nossa Solução Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* SEÇÃO – NOSSA SOLUÇÃO (A ENGENHARIA) */}
+          <div className="mb-20 mt-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                NOSSA SOLUÇÃO (A ENGENHARIA)
+              </h2>
+            </div>
+            
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+              {/* Left Column - Image */}
+              <div className="relative w-full md:w-auto">
+                <img 
+                  src="1750719338549.png" 
+                  alt="Nossa Solução - A Engenharia" 
+                  className="w-full h-auto rounded-lg shadow-xl"
+                />
+              </div>
+              
+              {/* Right Column - Content */}
+              <div className="space-y-6 w-full md:w-auto">
+                {/* Redline */}
+                <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-6 rounded-r-lg shadow-sm">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+                    Arquitetura de Capital Soberana: Onde a Tecnologia encontra a Estratégia Legal.
+                  </h3>
+                </div>
+
+                {/* Copy */}
+                <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                  <p>
+                    Não entregamos apenas código; entregamos uma nova fundação para o seu crescimento. Criamos ecossistemas de Utility Tokens que transformam sua tese de negócio em um ativo líquido e global.
+                  </p>
+                  
+                  <div className="bg-gray-50 rounded-lg p-6">
+                    <p className="font-semibold text-gray-900 mb-6 text-xl">A tríade do sucesso:</p>
+                    <div className="space-y-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white font-bold text-lg">1</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-gray-900 mb-2 text-lg">Blindagem Jurisdicional:</h4>
+                          <p className="text-gray-700">Operação estruturada fora do alcance de instabilidades locais.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white font-bold text-lg">2</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-gray-900 mb-2 text-lg">Eficiência de Fluxo:</h4>
+                          <p className="text-gray-700">Captar direto da fonte, sem intermediários mordendo sua margem.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white font-bold text-lg">3</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-gray-900 mb-2 text-lg">Preservação de Equity:</h4>
+                          <p className="text-gray-700">Financie sua expansão sem vender pedaços da sua empresa.</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                
-                {/* Decorative elements */}
-                <div className="absolute top-4 left-4 w-20 h-20 bg-red-500/10 rounded-full"></div>
-                <div className="absolute bottom-4 left-8 w-12 h-12 bg-blue-600/10 rounded-full"></div>
               </div>
             </div>
+          </div>
+
+          {/* SERVIÇOS DE ALTA PERFORMANCE Section */}
+          <section className="py-20 bg-gray-50 mt-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                {/* Left Column - Image */}
+                <div className="relative">
+                  <img 
+                    src="/WhatsApp Image 2026-01-05 at 16.26.05.jpeg" 
+                    alt="Serviços de Alta Performance" 
+                    className="w-full h-auto rounded-lg shadow-xl"
+                  />
+                </div>
+                
+                {/* Right Column - Content */}
+                <div className="space-y-8">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+                    SERVIÇOS DE ALTA PERFORMANCE
+                  </h2>
+                  
+                  <div className="space-y-6">
+                    {/* 1. Engenharia Jurisdicional & Offshores */}
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-lg">1</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">Engenharia Jurisdicional & Offshores</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          Não é apenas "abrir uma empresa". É escolher o campo de batalha. Estruturamos sua operação em Dubai, Cayman ou EUA, garantindo que o enquadramento do token seja blindado e otimizado fiscalmente.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* 2. Tokenomics de Precisão */}
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-lg">2</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">Tokenomics de Precisão</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          O token deve ser o combustível do seu ecossistema. Desenhamos a mecânica econômica para garantir escassez, utilidade real e sustentabilidade de longo prazo. Se o token não gera valor ao negócio, ele não serve.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* 3. Estruturação de Captação High-End */}
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-lg">3</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">Estruturação de Captação High-End</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          Transformamos seu projeto em uma tese de investimento irresistível. Criamos a narrativa institucional e a infraestrutura técnica para que grandes players e investidores estratégicos entrem no jogo com segurança.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* 4. Real Estate & Hard Assets */}
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-lg">4</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">Real Estate & Hard Assets</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          Para quem tem lastro real no Brasil ou Paraguai. Transformamos tijolo e terra em ativos digitais ágeis. Liquidez para o que antes era imóvel.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* PARA QUEM É Section */}
+          <section className="py-20 bg-gray-50 mt-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                  PARA QUEM É
+                </h2>
+              </div>
+              
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+                {/* Left Column - Image */}
+                <div className="relative w-full md:w-auto">
+                  <img 
+                    src="/empresas-com-mais-bitcoin-v0-56zx3ntaq7id1.webp" 
+                    alt="Para Quem É" 
+                    className="w-full h-auto rounded-lg shadow-xl"
+                  />
+                </div>
+                
+                {/* Right Column - Content */}
+                <div className="space-y-6 w-full md:w-auto">
+                  {/* Redline */}
+                  <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-6 rounded-r-lg shadow-sm">
+                    <h3 className="text-2xl md:text-2xl font-bold text-gray-900 leading-tight">
+                      Para quem joga o jogo do Longo Prazo.
+                    </h3>
+                  </div>
+
+                  {/* Copy */}
+                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                    <p className="font-semibold text-gray-900 mb-4">Não trabalhamos com apostas. Trabalhamos com:</p>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white font-bold text-lg">1</span>
+                        </div>
+                        <span className="text-gray-800 font-medium">Incorporadoras que buscam financiar obras sem a trava dos bancos.</span>
+                      </div>
+                      
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white font-bold text-lg">2</span>
+                        </div>
+                        <span className="text-gray-800 font-medium">Holdings que precisam de agilidade na movimentação de capital.</span>
+                      </div>
+                      
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white font-bold text-lg">3</span>
+                        </div>
+                        <span className="text-gray-800 font-medium">Empresas em Escala que faturam no Real/Guarani, mas pensam em Dólar.</span>
+                      </div>
+                      
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white font-bold text-lg">4</span>
+                        </div>
+                        <span className="text-gray-800 font-medium">Visionários que entenderam que a centralização financeira é o maior risco do século XXI.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* DIFERENCIAL Section */}
+          <section className="py-20 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                  DIFERENCIAL
+                </h2>
+              </div>
+              
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+                {/* Left Column - Image */}
+                <div className="relative w-full md:w-auto">
+                  <img 
+                    src="/areas-de-atuação-direito-empresarial.jpg" 
+                    alt="Diferencial" 
+                    className="w-full h-auto rounded-lg shadow-xl"
+                  />
+                </div>
+                
+                {/* Right Column - Content */}
+                <div className="space-y-6 w-full md:w-auto">
+                  {/* Redline */}
+                  <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-6 rounded-r-lg shadow-sm">
+                    <h3 className="text-2xl md:text-2xl font-bold text-gray-900 leading-tight">
+                      Nós não somos uma agência de tecnologia. Somos seus parceiros de estrutura.
+                    </h3>
+                  </div>
+
+                  {/* Copy */}
+                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                    <p>
+                      Enquanto programadores focam em linhas de código, nós focamos na sua viabilidade jurídica e comercial. Nossa equipe une o rigor do Direito Internacional com a agressividade da Estratégia de Vendas.
+                    </p>
+                    
+                    <div className="bg-gray-50 rounded-lg p-6">
+                      <p className="font-semibold text-gray-900 mb-4"></p>
+                      
+                      <div className="space-y-3">
+                        <p className="text-gray-800 font-medium"></p>
+                        <p className="text-gray-800 font-medium"></p>
+                        <p className="text-gray-800 font-medium"></p>
+                        <p className="text-gray-800 font-medium"></p>
+                        <p className="text-gray-800 font-medium"></p>
+                      </div>
+                    </div>
+                    
+                    <p className="text-xl font-semibold text-gray-900 mt-6">
+                      O token é o meio. A liberdade financeira e operacional da sua empresa é o fim.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA FINAL (FECHAMENTO EXECUTIVO) Section */}
+          <section className="py-20 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                  CTA FINAL (FECHAMENTO EXECUTIVO)
+                </h2>
+              </div>
+              
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+                {/* Left Column - Image */}
+                <div className="relative w-full md:w-auto">
+                  <img 
+                    src="/WhatsApp Image 2026-01-05 at 17.42.55.jpeg" 
+                    alt="CTA Final" 
+                    className="w-full h-auto rounded-lg shadow-xl"
+                  />
+                </div>
+                
+                {/* Right Column - Content */}
+                <div className="space-y-6 w-full md:w-auto">
+                  <p className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+                    A próxima fase da sua expansão começa com um aperto de mão estratégico.
+                  </p>
+                  
+                  <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+                    <p className="font-semibold text-gray-900"></p>
+                    <p>
+                      Estruturas de capital de elite não são feitas em série. Elas são desenhadas sob medida. Vamos analisar a viabilidade do seu projeto, a jurisdição ideal e o potencial de captação.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+
+      {/* CTA FINAL Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Redline */}
+          <div className="mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Toda estrutura começa com uma decisão estratégica.
+            </h2>
+          </div>
+
+          {/* Copy */}
+          <div className="space-y-6 text-lg text-gray-200 leading-relaxed mb-12 max-w-3xl mx-auto">
+            <p className="text-xl font-semibold text-white">
+              Cada empresa exige uma arquitetura própria.
+            </p>
+            <p>
+              A análise inicial define jurisdição, modelo de token, riscos e viabilidade.
+            </p>
+          </div>
+
+          {/* CTA Button */}
+          <div>
+            <a 
+              href="https://wa.me/message/GQRD6T6PCSMFF1" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-red-600 text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-red-700 transition-colors shadow-xl inline-block transform hover:scale-105 transition-transform"
+            >
+              Agendar Análise Estrutural Confidencial
+            </a>
           </div>
         </div>
       </section>
@@ -660,7 +486,7 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
               </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Para sua segurança e tranquilidade, siga nossas contas oficiais e junte-se a milhares de 
-              brasileiros já conectados conosco.
+              clientes já conectados conosco.
               </p>
             </div>
             
@@ -719,136 +545,6 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
         </div>
       </section>
 
-      {/* Portal App Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Tudo na palma da sua mão
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Gerencie sua vida empresarial e pessoal no Paraguai de qualquer lugar do mundo
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Content */}
-            <div>
-              {/* Badge */}
-              <div className="inline-block bg-blue-100 text-red-600 px-4 py-2 rounded-lg text-sm font-semibold mb-8">
-                📱 Acompanhamento em tempo real
-              </div>
-              
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                Seu processo de imigração sempre sob controle
-              </h3>
-              
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Receba notificações instantâneas sobre cada etapa do seu processo. 
-                Desde a residência temporária até a permanente, você nunca ficará perdido.
-              </p>
-              
-              {/* Features List */}
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                  </div>
-                  <span className="text-gray-700 font-medium">Notificações push sobre cada atualização</span>
-            </div>
-            
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700 font-medium">Linha do tempo visual do processo</span>
-                </div>
-                
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700 font-medium">Documentos organizados e acessíveis</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Right Column - Phone Mockup */}
-            <div className="relative flex justify-center">
-            <div className="relative">
-                {/* Phone Frame */}
-                <div className="w-80 h-[640px] bg-gradient-to-b from-gray-800 to-black rounded-[3.5rem] p-3 shadow-2xl">
-                  {/* Dynamic Island */}
-                  <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-black rounded-full z-10"></div>
-                  
-                  <div className="w-full h-full bg-white rounded-[3rem] overflow-hidden relative">
-                    {/* Status Bar */}
-                    <div className="flex justify-between items-center px-6 py-4 bg-white relative z-20">
-                      <span className="text-sm font-semibold text-gray-900">9:41</span>
-                      <div className="flex items-center space-x-1">
-                        {/* Signal bars */}
-                        <div className="flex items-end space-x-0.5">
-                          <div className="w-1 h-2 bg-gray-900 rounded-full"></div>
-                          <div className="w-1 h-3 bg-gray-900 rounded-full"></div>
-                          <div className="w-1 h-4 bg-gray-900 rounded-full"></div>
-                          <div className="w-1 h-3 bg-gray-400 rounded-full"></div>
-                        </div>
-                        {/* WiFi */}
-                        <svg className="w-4 h-4 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.07 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
-                        </svg>
-                        {/* Battery */}
-                        <div className="w-6 h-3 border border-gray-900 rounded-sm ml-1 relative">
-                          <div className="w-5 h-full bg-green-500 rounded-sm"></div>
-                          <div className="absolute -right-0.5 top-0.5 w-0.5 h-2 bg-gray-900 rounded-r-sm"></div>
-                      </div>
-                    </div>
-                  </div>
-                    
-                    
-                    {/* Content Area */}
-                    <div className="p-0 bg-gray-50 h-full flex items-center justify-center">
-                      <img 
-                        src="/Executivo Rocha (1).png" 
-                        alt="Executivo Rocha"
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Enhanced Floating Elements */}
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-full blur-sm"></div>
-                <div className="absolute -bottom-8 -right-8 w-20 h-20 bg-gradient-to-br from-green-500/20 to-green-600/10 rounded-full blur-sm"></div>
-                <div className="absolute top-1/2 -left-12 w-16 h-16 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-sm"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Pronto para sua mudança de vida no Paraguai?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Não perca a oportunidade de ter o suporte de especialistas confiáveis 
-            e dar o primeiro passo rumo à sua nova vida no Paraguai.
-          </p>
-          <a href="https://wa.me/message/GQRD6T6PCSMFF1" target="_blank" rel="noopener noreferrer" className="bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-block">
-            Agendar Consultoria Gratuita
-          </a>
-              </div>
-      </section>
-
       {/* Footer */}
       <footer id="contato" className="bg-black text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -894,63 +590,6 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
               </div>
             </div>
             
-            {/* Pagamentos Aceitos */}
-            <div>
-              <h4 className="text-white font-bold text-lg mb-6">PAGAMENTOS ACEITOS</h4>
-              <div className="grid grid-cols-3 gap-3 max-w-md mx-auto">
-                {/* Primeira fila */}
-                {/* PIX */}
-                <div className="bg-gray-800 rounded-lg p-3 flex items-center justify-center h-14 border border-red-600">
-                  <img 
-                    src="/pix-logo-new-BSicX-4_.png" 
-                    alt="PIX" 
-                    className="h-8 w-auto object-contain"
-                  />
-                </div>
-                {/* Stripe */}
-                <div className="bg-gray-800 rounded-lg p-3 flex items-center justify-center h-14 border border-red-600">
-                  <img 
-                    src="/stripe-logo-new-C4YqsY6S.png" 
-                    alt="Stripe" 
-                    className="h-6 w-auto object-contain"
-                  />
-                </div>
-                {/* USDC */}
-                <div className="bg-gray-800 rounded-lg p-3 flex items-center justify-center h-14 border border-red-600">
-                  <img 
-                    src="/usdc-logo-DW_NgE8V.png" 
-                    alt="USDC" 
-                    className="h-8 w-auto object-contain"
-                  />
-                </div>
-                
-                {/* Segunda fila */}
-                {/* PayPal */}
-                <div className="bg-gray-800 rounded-lg p-3 flex items-center justify-center h-14 border border-red-600">
-                  <img 
-                    src="/PayPal.svg.png" 
-                    alt="PayPal" 
-                    className="h-6 w-auto object-contain"
-                  />
-                </div>
-                {/* Western Union */}
-                <div className="bg-gray-800 rounded-lg p-3 flex items-center justify-center h-14 border border-red-600">
-                  <img 
-                    src="/Western-Union-Logо.png" 
-                    alt="Western Union" 
-                    className="h-6 w-auto object-contain"
-                  />
-                </div>
-                {/* Ebanx */}
-                <div className="bg-gray-800 rounded-lg p-3 flex items-center justify-center h-14 border border-red-600">
-                  <img 
-                    src="/Blueebanx.svg.png" 
-                    alt="Ebanx" 
-                    className="h-8 w-auto object-contain"
-                  />
-                </div>
-              </div>
-            </div>
             
             {/* Endereços */}
             <div>
@@ -965,7 +604,7 @@ Nossa equipe é composta por especialistas experientes, com histórico comprovad
                 <div>
                   <h5 className="text-white font-semibold text-sm mb-2">Nosso Escritório no Paraguai</h5>
                   <p className="text-gray-300 text-xs leading-relaxed">
-                    KM 8 ACARAY-CIUDAD DEL ESTE
+                    Rua calle Picuiba 07 area 3 cidade del este PY
                   </p>
                 </div>
                 <div>
