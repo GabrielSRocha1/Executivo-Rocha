@@ -608,7 +608,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <h5 className="text-white font-semibold text-sm mb-2">Ruc 8798953-0</h5>
+                  <h5 className="text-white font-semibold text-sm mb-2"></h5>
 
                 </div>
               </div>
