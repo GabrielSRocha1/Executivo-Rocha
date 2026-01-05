@@ -382,22 +382,6 @@ export default function Home() {
                     <p>
                       Enquanto programadores focam em linhas de código, nós focamos na sua viabilidade jurídica e comercial. Nossa equipe une o rigor do Direito Internacional com a agressividade da Estratégia de Vendas.
                     </p>
-                    
-                    <div className="bg-gray-50 rounded-lg p-6">
-                      <p className="font-semibold text-gray-900 mb-4"></p>
-                      
-                      <div className="space-y-3">
-                        <p className="text-gray-800 font-medium"></p>
-                        <p className="text-gray-800 font-medium"></p>
-                        <p className="text-gray-800 font-medium"></p>
-                        <p className="text-gray-800 font-medium"></p>
-                        <p className="text-gray-800 font-medium"></p>
-                      </div>
-                    </div>
-                    
-                    <p className="text-xl font-semibold text-gray-900 mt-6">
-                      O token é o meio. A liberdade financeira e operacional da sua empresa é o fim.
-                    </p>
                   </div>
                 </div>
               </div>
