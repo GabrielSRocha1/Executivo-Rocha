@@ -409,7 +409,7 @@ export default function Home() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                  CTA FINAL (FECHAMENTO EXECUTIVO)
+                 
                 </h2>
               </div>
               
@@ -598,7 +598,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                ENDEREÇOS
+                ENDEREÇO
               </h4>
               <div className="space-y-4">
                 <div>
