@@ -1,0 +1,15 @@
+node_modules
+.git
+.next
+.vercel
+*.log
+pnpm-lock.yaml
+yarn.lock
+.pnpm-store
+.pnpm-debug.log
+.pnpmfile.cjs
+pnpm-workspace.yaml
+.pnpm
+.pnpm-debug.log*
+.DS_Store
+*.tsbuildinfo
